@@ -14,7 +14,8 @@ status](https://www.r-pkg.org/badges/version/patter)](https://CRAN.R-project.org
 
 # Installation
 
-The `proj.verse` family of packages can be installed with:
+The [`proj.verse`](https://github.com/edwardlavender/proj.verse) family
+of packages can be installed with:
 
 ``` r
 install.packages("devtools")
@@ -24,7 +25,8 @@ devtools::install_github("edwardlavender/proj.verse",
 
 # Code of conduct
 
-Please note that the `proj.templates` project is released with a
-[Contributor Code of
+Please note that the
+[`proj.verse`](https://github.com/edwardlavender/proj.verse) project is
+released with a [Contributor Code of
 Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.

@@ -18,7 +18,7 @@
 #### Restore project dependencies
 
 #### Option (1): Automatic restoration via renv
-# Restore the project's dependencies (including dv) from the lockfile
+# Restore the project's dependencies (including proj.templates) from the lockfile
 restore <- tryCatch(renv::restore(), error = function(e) e)
 
 #### Option (2): Manual re-installation of packages
@@ -65,13 +65,13 @@ if (inherits(restore, "error")) {
 #### Rebuild project structure
 
 #### Recreate high-level project structure
-dv::use_template_proj(overwrite = FALSE)
+proj.templates::use_template_proj(overwrite = FALSE)
 
 #### Rebuild directory tree
-tree <- here::here("data", "dv", "tree.rds")
+tree <- here::here("data", "proj.templates", "tree.rds")
 if (file.exists(tree)) {
   tree <- readRDS(tree)
-  dv::use_template_tree(tree = tree, recreate = TRUE)
+  proj.templates::use_template_tree(tree = tree, recreate = TRUE)
 }
 
 #### Re-run project workflow

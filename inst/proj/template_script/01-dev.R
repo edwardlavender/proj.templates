@@ -22,6 +22,8 @@ usethis::git_vaccinate()
 renv::init()
 
 #### Install package(s)
+# renv::install("edwardlavender/proj.verse", prompt = FALSE)
+renv::install("edwardlavender/proj.file", prompt = FALSE)
 renv::install("edwardlavender/proj.templates", prompt = FALSE)
 # commonmark/(r)markdown packages (for README documentation)
 if (!requireNamespace("commonmark", quietly = TRUE))
@@ -37,6 +39,7 @@ if (!requireNamespace("stringr", quietly = TRUE))
   renv::install("stringr", prompt = FALSE)
 
 #### Use proj.templates templates
+library(proj.file)
 library(proj.templates)
 
 # Set up template project structure
@@ -48,8 +51,8 @@ use_template_gitignore()
 # Add a README and associated files
 usethis::use_code_of_conduct("insert_email_here")
 use_template_readme(title = "README",
-                        author = "insert_name_here",
-                        email = "insert_email_here")
+                    author = "insert_name_here",
+                    email = "insert_email_here")
 
 # Add template scripts
 if (!requireNamespace("pacman", quietly = TRUE))

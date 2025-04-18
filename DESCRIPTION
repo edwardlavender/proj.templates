@@ -9,8 +9,16 @@ Authors@R:
 Description: Scientific project development and management. 
 License: MIT + file LICENSE
 Imports:
-    glue, knitr, proj.build, rlang, rprojroot, rstudioapi, stringr, usethis
+    glue, 
+    knitr, 
+    proj.build, 
+    rlang, 
+    rprojroot, 
+    rstudioapi, 
+    stringr, 
+    usethis
 Suggests:
+    proj.file,
     testthat (>= 3.0.0)
 Remotes:
     github::edwardlavender/proj.build

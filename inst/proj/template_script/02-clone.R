@@ -68,7 +68,7 @@ if (inherits(restore, "error")) {
 proj.templates::use_template_proj(overwrite = FALSE)
 
 #### Rebuild directory tree
-tree <- here::here("data", "proj.templates", "tree.rds")
+tree <- here::here("data", "inst", "tree.rds")
 if (file.exists(tree)) {
   tree <- readRDS(tree)
   proj.templates::use_template_tree(tree = tree, recreate = TRUE)
